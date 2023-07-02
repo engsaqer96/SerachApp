@@ -17,8 +17,9 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
 
   @override
   void initState() {
+    print('content : '+ widget.content);
     print('hello from there');
-    APIControllers.apiControllers.getAllEpisodes(widget.content, 1).then((value) {
+    APIControllers.apiControllers.getAllEpisodes(widget.content,1).then((value) {
       setState(() {
         data = value;
       });
